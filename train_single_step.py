@@ -164,7 +164,6 @@ def main():
     evaluateL2 = nn.MSELoss(size_average=False).to(device)
     evaluateL1 = nn.L1Loss(size_average=False).to(device)
 
-
     best_val = 10000000
     optim = Optim(
         model.parameters(), args.optim, args.lr, args.clip, lr_decay=args.weight_decay
